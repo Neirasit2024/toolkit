@@ -1,0 +1,25 @@
+#header{
+    border-bottom: 2px solid white;
+    box-shadow: 0 0 10px  3px white;
+    .header{
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .header_logo{
+            a{
+                font-size: 40px;
+            }
+        }
+        .header_pages{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+            a{
+                font-size: 30px;
+            }
+        }
+    }
+}
