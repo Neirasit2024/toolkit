@@ -21,10 +21,7 @@ const Admin = () => {
    
 
   function addTask(){
-//     let newTask ={
-//         task: ,
-//         id: Date.now()
-//    }
+
    dispatch(addTodo({...inputValue, id:Date.now()}))
   }
     return (
