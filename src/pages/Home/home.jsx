@@ -11,8 +11,7 @@ import { MdDeleteOutline } from "react-icons/md";
 const Home = () => {
     const dispatch = useDispatch()
     const todo = useSelector(state=>state.todo.todo)
-    console.log(todo);
-
+    
     
 
     

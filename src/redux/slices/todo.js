@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     todo: JSON.parse(localStorage.getItem("todo")) || [],
-    favorite: []
+    favorite: JSON.parse(localStorage.getItem("favorite")) || []
 }
 
 export const TodoSlices = createSlice({
@@ -18,7 +18,9 @@ export const TodoSlices = createSlice({
             state.todo = state.todo.filter((el)=> el.id !== action.payload)
         },
         addFavorite(state, action){
-           state.favorite = [...state.favorite, ...state.todo.filter((el)=> el.id === action.payload)]
+            let favorite = [...state.favorite, ...state.todo.filter((el)=> el.id === action.payload)]
+            localStorage.setItem("favorite", JSON.stringify(favorite))
+           state.favorite = favorite
         }
     }
 })
